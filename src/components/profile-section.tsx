@@ -84,7 +84,7 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
                 size={12}
                 className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
               />
-              <span className="tracking-wider uppercase">CV</span>
+              <span className="tracking-wider uppercase">Resume</span>
             </a>
           )}
         </div>
@@ -98,30 +98,17 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
             <Mail size={14} />
             {aboutMe.email}
           </a>
-          {aboutMe.googleScholarUrl && (
+          {aboutMe.linkedinUsername && (
             <>
               <br />
               <a
-                href={aboutMe.googleScholarUrl}
+                href={`https://www.linkedin.com/in/${aboutMe.linkedinUsername}`}
                 className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <GraduationCap size={14} />
-                Google Scholar
-              </a>
-            </>
-          )}
-          {aboutMe.twitterUsername && (
-            <>
-              <br />
-              <a
-                href={`https://twitter.com/${aboutMe.twitterUsername}`}
-                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Twitter size={14} />@{aboutMe.twitterUsername}
+                <Linkedin size={14} />
+                linkedin.com/in/{aboutMe.linkedinUsername}
               </a>
             </>
           )}
@@ -139,17 +126,16 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
               </a>
             </>
           )}
-          {aboutMe.linkedinUsername && (
+          {aboutMe.twitterUsername && (
             <>
               <br />
               <a
-                href={`https://www.linkedin.com/in/${aboutMe.linkedinUsername}`}
+                href={`https://twitter.com/${aboutMe.twitterUsername}`}
                 className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Linkedin size={14} />
-                linkedin.com/in/{aboutMe.linkedinUsername}
+                <Twitter size={14} />@{aboutMe.twitterUsername}
               </a>
             </>
           )}
