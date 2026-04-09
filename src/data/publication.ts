@@ -22,7 +22,7 @@ export const publicationData: Publication[] = [
     title: "Soft Deletes in Django",
     paperUrl: "https://dev.to/bikramjeetsingh/soft-deletes-in-django-a9j",
     codeUrl: "https://github.com/BikramjeetSingh/Django-Soft-Delete-Tutorial-Example",
-    tldr: "How delete data from your Django application without actually deleting it.",
+    tldr: "How to delete data from your Django application without actually deleting it.",
   },
   {
     title: "A Comprehensive Guide to Django Middleware",
